@@ -1,0 +1,9 @@
+# Ignore some folder
+_backup/
+target/
+
+# Ignore environment file
+.env
+
+# Ignore Note.txt
+Note.txt
