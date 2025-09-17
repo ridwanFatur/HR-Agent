@@ -8,6 +8,7 @@
 
 - Java JDK installed
 - [Maven](https://maven.apache.org/install.html) installed on Windows
+- A `.env` file in the project root containing your OpenAI API key:
 
 ---
 
