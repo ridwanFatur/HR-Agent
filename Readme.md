@@ -25,16 +25,20 @@ In the CLI, the user prompt is parsed using OpenAI function calls. The available
 
 If no function matches the user prompt, a normal message is returned.  
 Example:
+```
 Anda: Halo Memproses... 
 HR Agent: Halo! Ada yang bisa saya bantu hari ini?
+```
 
 If parameters are missing, the agent will ask for them:
+```
 Anda: Ajukan cuti Memproses... 
 HR Agent: Tentu, saya bisa membantu Anda mengajukan cuti. Silakan berikan informasi berikut: 
 1. Jenis cuti (tahunan, sakit, cuti melahirkan) 
 2. Nama Anda 
 3. Tanggal mulai cuti (format dd-MM-yyyy) 
 4. Tanggal selesai cuti (format dd-MM-yyyy)
+```
 
 Next, if the function requires an employeeName, it is matched against employee.csv using full name or substring via FuzzyScore. If no match is found, a fallback error is returned.
 
