@@ -34,7 +34,7 @@ public class DataManager {
 	}
 
 	public Optional<Employee> checkName(String name) {
-		int threshold = 80;
+		int threshold = 7;
 		if (name == null || name.isBlank()) {
 			return Optional.empty();
 		}
@@ -60,6 +60,7 @@ public class DataManager {
 			String empLower = emp.getName().toLowerCase();
 
 			int scoreFull = fuzzy.fuzzyScore(nameLower, empLower);
+			// System.out.println("Comparing '" + nameLower + "' with '" + empLower + "' -> scoreWord = " + scoreFull);
 			if (scoreFull >= threshold) {
 				candidates.add(new FuzzyCandidate(emp, 2, scoreFull));
 				continue;
@@ -67,6 +68,7 @@ public class DataManager {
 
 			for (String word : empLower.split(" ")) {
 				int scoreWord = fuzzy.fuzzyScore(nameLower, word);
+				// System.out.println("Comparing '" + nameLower + "' with '" + word + "' -> scoreWord = " + scoreWord);
 				if (scoreWord >= threshold) {
 					candidates.add(new FuzzyCandidate(emp, 1, scoreWord));
 					break;
