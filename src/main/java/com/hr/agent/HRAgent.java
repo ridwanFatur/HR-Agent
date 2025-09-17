@@ -93,7 +93,7 @@ public class HRAgent {
 				.model(ChatModel.GPT_3_5_TURBO)
 				.addSystemMessage(systemPrompt)
 				.addUserMessage(userPrompt)
-				.temperature(0.0)
+				.temperature(0.6)
 				.build();
 
 		ChatCompletion chatCompletion = client.chat().completions().create(params);
