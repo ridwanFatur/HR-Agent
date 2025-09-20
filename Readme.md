@@ -121,3 +121,6 @@ Memproses...
 HR Agent: KONFIRMASI: Pengajuan cuti untuk Budi Santoso (jenis: tahunan) dari tanggal 3 October 2025 hingga 5 October 2025 telah dicatat.
 ```
 
+### Demo
+
+![Demo](demo.gif)
